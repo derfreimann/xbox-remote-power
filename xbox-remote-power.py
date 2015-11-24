@@ -54,7 +54,7 @@ def main():
 
     if py3:
         power_packet = bytes.fromhex(XBOX_POWER)
-        power_packet = power_packet + opts.live_id + b'\x00'
+        power_packet = power_packet + live_id + b'\x00'
     else:
         power_packet = XBOX_POWER + opts.live_id.encode("hex") + "00"
         power_packet = power_packet.decode("hex")
